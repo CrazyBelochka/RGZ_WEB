@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+<title>Sort a HTML Table Alphabetically</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+ 
+    <script src="app.js"></script>
+
+<p><strong>Click the headers to sort the table.</strong></p>
+<p>The first time you click, the sorting direction is ascending (A to Z).</p>
+<p>Click again, and the sorting direction will be descending (Z to A):</p>
+<input class="form-control" type="text" placeholder="Поиск" id="search-text" onkeyup="finder()">
+
+<fieldset>
+    <legend>Выберите тип поиска:</legend>
+
+    <div>
+      <input type="checkbox" class="checkoption" id="Name" name="Name" onclick="checkedOnClick(this);">
+      <label for="Name">Name</label>
+    </div>
+
+    <div>
+      <input type="checkbox" class="checkoption" id="City" name="City" onclick="checkedOnClick(this);">
+      <label for="City">City</label>
+    </div>
+
+    <div>
+        <input type="checkbox" class="checkoption" id="Group" name="Group" onclick="checkedOnClick(this);">
+        <label for="Group">Group</label>
+      </div>
+
+      <div>
+        <input type="checkbox" class="checkoption" id="Age" name="Age" onclick="checkedOnClick(this);">
+        <label for="Age">Age</label>
+      </div>
+</fieldset>
+
+<table id="myTable">
+  <tr>
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)">Name</th>
+    <th onclick="sortTable(1)">City</th>
+    <th onclick="sortTable(2)">Group</th>
+    <th onclick="sortTable(3)">Age</th>
+  </tr>
+  <tr>
+    <td>Roman</td>
+    <td>Novosibirsk</td>
+    <td>AP-026</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Artem</td>
+    <td>Berdsk</td>
+    <td>AP-126</td>
+    <td>21</td>
+  </tr>
+  <tr>
+    <td>Sergey</td>
+    <td>Irkutsk</td>
+    <td>AVT-100</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Maksim</td>
+    <td>Novosibirsk</td>
+    <td>AP-026</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Nikita</td>
+    <td>Moscow</td>
+    <td>AP-027</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Maria</td>
+    <td>Moscow</td>
+    <td>PO-123</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Sasha</td>
+    <td>Saint-Petersburg</td>
+    <td>GNO-001</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>Clara</td>
+    <td>Irkutsk</td>
+    <td>KLE-089</td>
+    <td>30</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
